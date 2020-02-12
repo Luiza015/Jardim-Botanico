@@ -5,5 +5,6 @@
 
 #ignora arquivos de excel
 *.xlsx
+#ignorar pasta de docs
 docs
 
