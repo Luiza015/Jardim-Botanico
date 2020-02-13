@@ -236,3 +236,22 @@ iris[iris$Sepal.Width %in% outliers2 &
        iris$Species == "setosa",
      c("Sepal.Width", "Species")]
 
+#Entendendo a distribuição dos dados- Vamos olhar para os dados morfométricos das espécies de Iris e comparar com uma distribuição normal. No R, isto pode ser feito de forma visual com as funções qqnorm e qqline.
+
+par(mfrow = c(1,3))
+qqnorm(iris$Sepal.Length[iris$Species == "setosa"],
+       main = "setosa")
+qqline(iris$Sepal.Length[iris$Species == "setosa"])
+qqnorm(iris$Sepal.Length[iris$Species == "versicolor"],
+       main = "versicolor")
+qqline(iris$Sepal.Length[iris$Species == "versicolor"])
+qqnorm(iris$Sepal.Length[iris$Species == "virginica"],
+       main = "virginica")
+qqline(iris$Sepal.Length[iris$Species == "virginica"])
+par(mfrow=c(1,1))
+
+#Relação entre as variáveis- Uma função no R que nos ajuda a explorar a relação entre muitas variáveis é a pairs. O resultado é uma matriz com variáveis em linhas e colunas o gráfico que vemos é o gráfico de dispersão para cada par de variáveis.
+pairs(vars)
+
+
+####__________________________________________####
